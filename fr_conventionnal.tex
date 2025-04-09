@@ -1,0 +1,61 @@
+% ============================================================================
+% Class import
+% "Conventionnal" option is for conventionnal letters.
+% "CoverLetter" option is for cover letters.
+% Two languages are available : "fr" and "en"
+
+\documentclass[fr]{lettertemplate}
+
+% ============================================================================
+% Constant definition
+% *1: Those constants must be either both empty or both non-empty.
+% *2: At least Description or FirstName/LastName must be given.
+
+\def\SenderFirstName{Prénom}            % *1
+\def\SenderLastName{Nom}                % *1
+\def\SenderAddress{XX Adresse}
+\def\SenderCity{Ville}
+\def\SenderCityCode{XXXXX}
+\def\SenderPhone{Numéro de téléphone}   % Optionnal
+\def\SenderEmail{Email}                 % Optionnal
+
+\def\ReceiverFirstName{Prénom}          % *1 *2
+\def\ReceiverLastName{Nom}              % *1 *2
+\def\ReceiverDescription{Description}   % *2
+\def\ReceiverAddress{XX Adresse}
+\def\ReceiverCityCode{XXXXX}
+\def\ReceiverCity{Ville}
+
+\def\SendingPlace{Ville}
+
+\def\Object{}
+\def\Attachment{}                       % Optionnal
+
+% ============================================================================
+% Letter content
+
+\begin{document}
+
+    \makeheader
+
+    \noindent
+    À l’attention de ...,
+
+    \paragraph{}
+        % Introduction
+        ...
+
+    \paragraph{}
+        % Content
+        ...
+
+    \vskip 0.25cm
+
+    \noindent
+    Dans l’attente de votre réponse, veuillez agréer Madame, Monsieur, mes salutations distinguées.
+
+    \sign
+
+\end{document}
+
+% ============================================================================

@@ -1,0 +1,58 @@
+% ============================================================================
+% Class import
+% Option 1: "CoverLetter", or leave empty.
+% Option 2: "fr" for French and "en" for English. One must be given.
+
+\documentclass[en]{lettertemplate}
+
+% ============================================================================
+% Constant definition
+% *1: Those constants must be either both empty or both non-empty.
+% *2: At least Description or FirstName/LastName must be given.
+
+\def\SenderFirstName{FirstName}         % *1
+\def\SenderLastName{LastName}           % *1
+\def\SenderAddress{Address}
+\def\SenderCity{City}
+\def\SenderCityCode{XXXXX}
+\def\SenderPhone{Phone number}          % Optionnal
+\def\SenderEmail{Email}                 % Optionnal
+
+\def\ReceiverFirstName{FirstName}       % *1 *2
+\def\ReceiverLastName{LastName}         % *1 *2
+\def\ReceiverDescription{Description}   % *2
+\def\ReceiverAddress{Address}
+\def\ReceiverCityCode{XXXXX}
+\def\ReceiverCity{City}
+
+\def\Object{}
+\def\Attachment{}                       % Optionnal
+
+% ============================================================================
+% Letter content
+
+\begin{document}
+
+    \makeheader
+
+    \noindent
+    Dear ...,
+
+    \paragraph{}
+        % Introduction
+        ...
+
+    \paragraph{}
+        % Content
+        ...
+
+    \vskip 1cm
+
+    \noindent
+    Yours sincerly,
+
+    \sign
+
+\end{document}
+
+% ============================================================================
